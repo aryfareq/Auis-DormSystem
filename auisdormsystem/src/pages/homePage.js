@@ -1,43 +1,64 @@
 import "./homePage.css"
-
+import backgroundImg from '../assets/auisBackground.png';
+// this is an import for the student img
+import profileDummy from "../assets/profileDummy.png";
 
 function homePage() {
     return (
         <div className="home-page">
-            <span className="home-span">
-                <h1>Welcome to the <span className="bold">AUIS Dorm Booker</span></h1>
-                <h2>We wish you a comfortable stay!</h2>
-                <button className="home-button">Get Help</button>
-            </span>
+            <section
+                className="landing-section"
+                style={{
+                    backgroundImage: `url(${backgroundImg})`,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                    minHeight: '32rem', // approx 512px if root font-size is 16px
+                    width: '100vw',
+                    display: 'flex',
+                    alignItems: 'center',
+                    backgroundAttachment: 'fixed',
+                }}>
+                <span className="home-span">
+                    <h1 className="landing-txt-h1">Welcome to the <span className="bold">AUIS Dorm Booker</span></h1>
+                    <h2 className="landing-txt-h2">We wish you a comfortable stay!</h2>
+                    <button className="home-button">Get Help</button>
+                </span>
+            </section>
             <section className="room-section">
-                <h2>Your Current Information</h2>
-                <div className="info-container">
-                    <img src="https://via.placeholder.com/150" alt="Profile" className="profile-image" />
-                    <p>Placeholder name</p>
-                    <p>Placeholder ID</p>
-                    <p>Placeholder Stage</p>
-                    <h3>eligable to Placeholder Dorm</h3>
-                </div>
-                <div className="info-container">
-                    <h2>Current Room Information</h2>
-                    <h1>Placeholder Room</h1>
-                    <button>Unbook</button>
-                    <button>Check in</button>
+                <h1>Your Current Information</h1>
+                <div className="container-flex">
+                    <div className="info-container">
+                        {/* this is an import for the student img */}
+                        <img src={profileDummy} alt="Profile" className="profile-image" />
+                        <p>Placeholder name</p>
+                        <p>Placeholder ID</p>
+                        <p>Placeholder Stage</p>
+                        <h2>Eligable to Placeholder Dorm</h2>
+                    </div>
+                    <div className="info-container">
+                        <h2>Current Room Information</h2>
+                        <h1>Placeholder Room</h1>
+                        <span>
+                            <button>Unbook</button>
+                            <button>Check in</button>
+                        </span>
+                    </div>
                 </div>
             </section>
             <section className="card-section">
-            {/* <!-- Placeholder for card section --> */}
-            <p><span className="bold">What to bring?</span><br />
-                Here are some suggestions for items you might want to bring to your dorm:<br />
-                <ol>
-                    <li>Bedding for a single mattress "Mattress cover, sheets, blanket or duvet"</li>
-                    <li>Pillow</li>
-                    <li>Towels</li>
-                    <li>Rug or carpet</li>
-                    <li>Laundery detergent</li>
-                    <li>Toiletries</li>
-                </ol>
-            </p>
+                {/* <!-- Placeholder for card section --> */}
+                <p><span className="bold">What to bring?</span><br />
+                    Here are some suggestions for items you might want to bring to your dorm:<br />
+                    <ol>
+                        <li>Bedding for a single mattress "Mattress cover, sheets, blanket or duvet"</li>
+                        <li>Pillow</li>
+                        <li>Towels</li>
+                        <li>Rug or carpet</li>
+                        <li>Laundery detergent</li>
+                        <li>Toiletries</li>
+                    </ol>
+                </p>
             </section>
         </div>
     );
