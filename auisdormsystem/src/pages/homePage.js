@@ -2,6 +2,9 @@ import "./homePage.css"
 import backgroundImg from '../assets/auisBackground.png';
 // this is an import for the student img
 import profileDummy from "../assets/profileDummy.png";
+import RoomTypesList from "../components/RoomTypeCard";
+import roomType from "../assets/roomTypes.js";
+
 
 function homePage() {
     return (
@@ -47,7 +50,8 @@ function homePage() {
                 </div>
             </section>
             <section className="card-section">
-                {/* <!-- Placeholder for card section --> */}
+                <h1>Available room's are</h1>
+                <div id="room-card">{roomType.map(RoomTypesList)}</div>
                 <p><span className="bold">What to bring?</span><br />
                     Here are some suggestions for items you might want to bring to your dorm:<br />
                     <ol>

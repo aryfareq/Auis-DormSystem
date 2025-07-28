@@ -69,9 +69,11 @@ button:hover {
     margin: 2rem 0rem 3rem 0rem;
     text-align: center;
 }
-.room-info-content h1{
-    margin:1rem;
+
+.room-info-content h1 {
+    margin: 1rem;
 }
+
 .room-section h2 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
@@ -90,7 +92,7 @@ button:hover {
     padding: 0.5rem 2rem;
     text-align: center;
     margin: 0.5rem;
-    height:25rem;
+    height: 25rem;
     border-radius: 1rem;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -114,6 +116,29 @@ button:hover {
 .card-section p {
     font-size: 1.5rem;
 }
-p{
-    margin:0;
+
+p {
+    margin: 0;
+}
+
+#room-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 5rem 10rem;
+}
+
+.card-section h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 5rem;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }

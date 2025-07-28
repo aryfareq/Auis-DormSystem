@@ -1,0 +1,44 @@
+.room-wrapper {
+  position: relative;
+  width: 27rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-type-name {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: 4rem;
+  background-color: #002855;
+  box-shadow: 1px 1px 3px black;
+  color: white;
+  text-align: center;
+  /* line-height: 50px; */
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.room-type {
+  width: 27rem;
+  padding: 3rem 0;
+  box-shadow: 1px 1px 3px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  gap: 2rem;
+}
+
+#semester {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

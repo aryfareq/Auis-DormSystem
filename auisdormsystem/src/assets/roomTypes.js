@@ -40,3 +40,4 @@ const roomTypes = [
         }
     }
 ];
+export default roomTypes;
