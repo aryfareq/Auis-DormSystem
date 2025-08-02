@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import AdminNav from './components/adminNav';
+import BookingPage from './pages/bookingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AdminNav />
+    <BookingPage />
   </React.StrictMode>
 );
 
