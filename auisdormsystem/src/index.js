@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import Navbar from './components/navbar';
-// import HomePage from './pages/homePage';
-// import Footer from './components/footer';
 import reportWebVitals from './reportWebVitals';
-import LoginPage from './pages/loginPage';
+import AdminNav from './components/adminNav';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <LoginPage />
+    <AdminNav />
   </React.StrictMode>
 );
 
