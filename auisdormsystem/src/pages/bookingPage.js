@@ -4,23 +4,32 @@ import apartments from '../assets/apartments';
 import '../components/roomBtn.css';
 import backgroundImg from '../assets/auisBackground.png';
 import Footer from '../components/footer';
+import Button from '../components/button';
+
 
 function BookingPage() {
-    const [selectedType, setSelectedType] = useState(null);
-    const [selectedFloor, setSelectedFloor] = useState(null);
-    const [selectedApartment, setSelectedApartment] = useState(null);
+    const defaultType = apartments.find((typeObj) => typeObj.type === "Standard");
+    const defaultFloor = defaultType.floors.find((floorObj) => floorObj.floor === 0);
+    const defaultApartment = defaultFloor.rooms.find((room) => room.roomNumber === 1);
+
+    const [selectedType, setSelectedType] = useState(defaultType);
+    const [selectedFloor, setSelectedFloor] = useState(defaultFloor);
+    const [selectedApartment, setSelectedApartment] = useState(defaultApartment);
     const [selectedSection, setSelectedSection] = useState(null);
 
     const handleTypeClick = (typeObj) => {
         setSelectedType(typeObj);
-        setSelectedFloor(null);
-        setSelectedApartment(null);
+        const defaultFloor = typeObj.floors[0];
+        const defaultApartment = defaultFloor.rooms[0];
+        setSelectedFloor(defaultFloor);
+        setSelectedApartment(defaultApartment);
         setSelectedSection(null);
     };
 
     const handleFloorClick = (floorObj) => {
         setSelectedFloor(floorObj);
-        setSelectedApartment(null);
+        const defaultApartment = floorObj.rooms[0];
+        setSelectedApartment(defaultApartment);
         setSelectedSection(null);
     };
 
@@ -42,12 +51,12 @@ function BookingPage() {
                 backgroundPosition: 'center',
                 width: '100vw',
                 height: '100vh',
-                overflow: 'hidden',
+                overflowX: 'hidden',
             }}
         >
             <Navbar />
-            <div className="booking-container"
-            >
+            <h1>You Can Now Digitally Book!</h1>
+            <div className="booking-container">
                 <ul className="type-list">
                     {apartments.map((typeObj) => (
                         <li
@@ -115,12 +124,11 @@ function BookingPage() {
                                 </div>
                             </>
                         )}
+                        <Button name="Submit Booking"/>
                     </div>
-
-
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

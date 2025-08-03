@@ -1,26 +1,38 @@
-.booking-container{
-    padding: 1rem;
-    background-color: #ccc;
-    width: 75%;
-    height: 65%;
-    margin: 5rem auto;
+*{
+    scrollbar-width: none;
 }
-.type-list{
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 5rem;
+    color: #ffffff;
+}
+.booking-container {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  width: 75%;
+  height: 30rem;
+  margin: 5rem auto;
+}
+
+.type-list {
   display: flex;
   justify-content: start;
   align-items: center;
   margin: 0;
-  gap:1rem;
+  gap: 1rem;
   list-style: none;
   padding-left: 0;
   cursor: pointer;
 }
+
 .type-item {
   padding: 0.5rem;
   border-radius: 5px;
   user-select: none;
   transition: background-color 0.3s ease;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 
@@ -50,6 +62,7 @@
 .room-btn:hover {
   background-color: #01418a;
 }
+
 .room-btn.active {
   background-color: #C28900;
   color: white;
@@ -69,26 +82,31 @@
   justify-content: center;
   margin-top: 4rem;
 }
+
 .listed-apartments {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-  align-items:start;
+  align-items: start;
   gap: 1rem;
 }
-.h3-txt{
-  width:100%;;
+
+.h3-txt {
+  width: 100%;
+  ;
   text-align: center;
   font-size: 1.5rem;
   font-weight: normal;
 }
 
 
-.apartment-buttons, .floor-buttons{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(4, 1fr);
-grid-column-gap: 10px;
-grid-row-gap: 10px;
+.apartment-buttons,
+.floor-buttons {
+  height:70%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
 }
