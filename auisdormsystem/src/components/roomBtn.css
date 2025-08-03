@@ -46,8 +46,8 @@ h1{
 }
 
 .room-btn {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   margin: 8px;
   font-size: 2rem;
   text-align: center;
@@ -93,10 +93,9 @@ h1{
 }
 
 .h3-txt {
-  width: 100%;
-  ;
+  width: 100%;;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: normal;
 }
 
@@ -111,10 +110,44 @@ h1{
   align-items: start;
 }
 .selected-info{
-  text-align: center;
-  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
 }
 .selected-info p{
     font-size: 1.2rem;
 
+}
+
+@media screen and (max-width: 768px) {
+  .booking-container {
+    width: 90%;
+    height: auto;
+    margin: 2rem auto;
+  }
+  
+  .type-list {
+    justify-content: center;
+    align-items: center;
+    margin:2rem 0 -2rem 0
+  }
+  
+  .room-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .listed-apartments {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .apartment-buttons,
+  .floor-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  
 }

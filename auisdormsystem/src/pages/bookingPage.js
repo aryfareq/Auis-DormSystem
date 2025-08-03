@@ -57,6 +57,7 @@ function BookingPage() {
             <Navbar />
             <h1>You Can Now Digitally Book!</h1>
             <div className="booking-container">
+                {/* this is where the apartmanet types will be */}
                 <ul className="type-list">
                     {apartments.map((typeObj) => (
                         <li
@@ -68,7 +69,9 @@ function BookingPage() {
                         </li>
                     ))}
                 </ul>
+                {/* the main container for the apartments, floors, and sections */}
                 <div className="apartment-container">
+                    {/* floor buttons */}
                     <div className="listed-apartments">
                         {selectedType && (
                             <>
@@ -87,7 +90,7 @@ function BookingPage() {
                             </>
                         )}
                     </div>
-
+                    {/* apartmanet buttons */}
                     <div className="listed-apartments">
                         {selectedFloor && (
                             <>
@@ -106,7 +109,7 @@ function BookingPage() {
                             </>
                         )}
                     </div>
-
+                    {/* section buttons */}
                     <div className="listed-apartments">
                         {selectedApartment?.section && (
                             <>
@@ -126,6 +129,7 @@ function BookingPage() {
                         )}
                     </div>
                 </div>
+                {/* this is the button, with the apartment booking information */}
                 <div className="selected-info">
                     {selectedFloor && selectedApartment && (
                         <p>
