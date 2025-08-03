@@ -124,8 +124,16 @@ function BookingPage() {
                                 </div>
                             </>
                         )}
-                        <Button name="Submit Booking"/>
                     </div>
+                </div>
+                <div className="selected-info">
+                    {selectedFloor && selectedApartment && (
+                        <p>
+                            Selected: Floor <strong>{selectedFloor.floor}</strong>, Apartment <strong>{selectedApartment.roomNumber}</strong>
+                            {selectedSection && `, Section: ${selectedSection}`}
+                        </p>
+                    )}
+                    <Button name="Submit Booking" />
                 </div>
             </div>
             <Footer />

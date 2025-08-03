@@ -4,7 +4,7 @@
 h1{
     font-size: 2.5rem;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
     color: #ffffff;
 }
 .booking-container {
@@ -12,8 +12,8 @@ h1{
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 1rem;
   width: 75%;
-  height: 30rem;
-  margin: 5rem auto;
+  height: 40rem;
+  margin: 3rem auto;
 }
 
 .type-list {
@@ -109,4 +109,12 @@ h1{
   flex-wrap: wrap;
   justify-content: center;
   align-items: start;
+}
+.selected-info{
+  text-align: center;
+  margin: 3rem auto;
+}
+.selected-info p{
+    font-size: 1.2rem;
+
 }
