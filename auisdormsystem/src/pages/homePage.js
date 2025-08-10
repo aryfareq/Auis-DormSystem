@@ -4,11 +4,14 @@ import backgroundImg from '../assets/auisBackground.png';
 import profileDummy from "../assets/profileDummy.png";
 import RoomTypesList from "../components/RoomTypeCard";
 import roomType from "../assets/roomTypes.js";
+import Navbar from "../components/navbar.js";
+import Footer from "../components/footer.js";
 
 
 function homePage() {
     return (
         <div className="home-page">
+            <Navbar/>
             <section
                 className="landing-section"
                 style={{
@@ -64,6 +67,7 @@ function homePage() {
                     </ol>
                 </p>
             </section>
+            <Footer/>
         </div>
     );
 }
